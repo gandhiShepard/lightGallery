@@ -52,13 +52,14 @@ function Gallery() {
                 onInit={onInit}
                 speed={500}
                 plugins={[lgThumbnail, lgZoom]}
+                licenseKey="license_key_"
             >
-                <a href="img/img1.jpg">
-                    <img alt="img1" src="img/thumb1.jpg" />
-                </a>
-                <a href="img/img2.jpg">
-                    <img alt="img2" src="img/thumb2.jpg" />
-                </a>
+                <figure data-src="img/img1.jpg">
+                    <img src="img/thumb1.jpg" alt="Image description"/>
+                </figure>
+                <figure data-src="img/img2.jpg">
+                    <img src="img/thumb2.jpg" alt="Image description"/>
+                </figure>
                 ...
             </LightGallery>
         </div>
@@ -87,10 +88,17 @@ function Gallery() {
             <LightGallery
                 elementClassNames="custom-wrapper-class"
                 onBeforeSlide={onBeforeSlide}
+                licenseKey="license_key"
             >
-                <a href="img/img1.jpg">
-                    <img alt="img1" src="img/thumb1.jpg" />
-                </a>
+                <figure 
+                    data-src="img/img1.jpg"
+                    className="custom-class"
+                >
+                    <img 
+                        src="img/thumb1.jpg" 
+                        alt="Image description"
+                    />
+                </figure>
                 ...
             </LightGallery>
         </div>
